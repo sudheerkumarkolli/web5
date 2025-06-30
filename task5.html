@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task 5 - Simple Quiz</title>
+<style>
+    body { font-family: sans-serif; background: white; color: black; text-align: center; padding: 20px; }
+    h2 { color: #0a74da; }
+    button { background: #0a74da; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 5px; }
+    button:hover { background: #084c9e; }
+    .question { margin: 20px 0; }
+</style>
+</head>
+<body>
+<h2>Mini Quiz</h2>
+<div class="question">
+    <p>1. What does CSS stand for?</p>
+    <button onclick="checkAnswer(true, this)">Cascading Style Sheets</button>
+    <button onclick="checkAnswer(false, this)">Creative Style Setup</button>
+</div>
+<div class="question">
+    <p>2. Which language is used to add interactivity on web pages?</p>
+    <button onclick="checkAnswer(true, this)">JavaScript</button>
+    <button onclick="checkAnswer(false, this)">HTML</button>
+</div>
+<script>
+function checkAnswer(correct, btn){
+    if(correct){
+        btn.style.background = 'green';
+        alert("Correct!");
+    } else {
+        btn.style.background = 'red';
+        alert("Incorrect, try again!");
+    }
+}
+</script>
+</body>
+</html>
